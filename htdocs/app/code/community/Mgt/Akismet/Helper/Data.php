@@ -31,5 +31,15 @@
 
 class Mgt_Akismet_Helper_Data extends Mage_Core_Helper_Abstract
 {
-
+    const LOGFILE = 'mgt_akismet.log';
+    
+    public function isActive()
+    {
+        return Mage::getSingleton('mgt_akismet/akismet')->isActive();
+    }
+    
+    public function log($message)
+    {
+        Mage::log($message, null, self::LOGFILE, true);
+    }
 }

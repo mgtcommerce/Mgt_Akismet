@@ -21,6 +21,16 @@
                 <class>Mgt_Akismet_Helper</class>
             </mgt_akismet>
         </helpers>
+        <events>
+            <review_save_before>
+                <observers>
+                    <mgt_akismet_review>
+                        <class>mgt_akismet/observer</class>
+                        <method>checkReviewForSpam</method>
+                    </mgt_akismet_review>
+                </observers>
+            </review_save_before>
+        </events>
     </global>
     <adminhtml>
         <acl>
