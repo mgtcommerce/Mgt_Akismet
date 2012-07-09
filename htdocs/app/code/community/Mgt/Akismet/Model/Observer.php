@@ -34,7 +34,7 @@ class Mgt_Akismet_Model_Observer
     public function checkReviewForSpam(Varien_Event_Observer $observer)
     {
         $review = $observer->getEvent()->getObject();
-        $akismet = self::_getAkismet();
+        $akismet = $this->_getAkismet();
         if ($akismet->isActive() && isset($review)) {
             $reviewData = array(
                 'name' => $review->getNickname(),
@@ -46,7 +46,7 @@ class Mgt_Akismet_Model_Observer
         }
     }
     
-    static protected function _getAkismet()
+    protected function _getAkismet()
     {
         return Mage::getSingleton('mgt_akismet/akismet');
     }
