@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Mgt_Akismet>
+            <version>1.0.0</version>
+        </Mgt_Akismet>
+    </modules>
+    <global>
+        <blocks>
+            <mgt_akismet>
+                <class>Mgt_Akismet_Block</class>
+            </mgt_akismet>
+        </blocks>
+        <models>
+            <mgt_akismet>
+                <class>Mgt_Akismet_Model</class>
+            </mgt_akismet>
+        </models>
+        <helpers>
+            <mgt_akismet>
+                <class>Mgt_Akismet_Helper</class>
+            </mgt_akismet>
+        </helpers>
+    </global>
+    <adminhtml>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <mgt_akismet translate="title" module="mgt_akismet">
+                                            <title>mgt-commerce</title>
+                                        </mgt_akismet>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                   </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+     <modules>
+        <Mgt_Akismet>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Mgt_Akismet>
+     </modules>
+</config>
