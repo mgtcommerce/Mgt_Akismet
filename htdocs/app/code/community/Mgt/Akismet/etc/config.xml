@@ -32,6 +32,17 @@
             </review_save_before>
         </events>
     </global>
+    <frontend>
+        <routers>
+            <contacts>
+                <args>
+                    <modules>
+                        <mgt_akismet before="Mage_Contacts">Mgt_Akismet</mgt_akismet>
+                    </modules>
+                </args>
+            </contacts>
+        </routers>
+    </frontend>
     <adminhtml>
         <acl>
             <resources>
