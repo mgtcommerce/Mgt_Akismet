@@ -20,13 +20,6 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-/**
- * Mgt Akismet Contacts Controller
- *
- * @category   Mgt
- * @package    Mgt_Akismet
- * @author     Stefan Wieczorek <stefan.wieczorek@mgt-commerce.com>
- */
  
 require_once 'Mage/Contacts/controllers/IndexController.php';
 

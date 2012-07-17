@@ -1,5 +1,4 @@
 <?php
-
 /**
  * MGT-Commerce GmbH
  * http://www.mgt-commerce.com
@@ -15,31 +14,26 @@
  * to info@mgt-commerce.com so we can send you a copy immediately.
  *
  * @category    Mgt
- * @package     Mgt_Akismet
+ * @package     Mgt_Base
  * @author      Stefan Wieczorek <stefan.wieczorek@mgt-commerce.com>
  * @copyright   Copyright (c) 2012 (http://www.mgt-commerce.com)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-class Mgt_Akismet_Model_Observer
+class Mgt_Base_Adminhtml_MgtController extends Mage_Adminhtml_Controller_Action
 {
-    public function checkReviewForSpam(Varien_Event_Observer $observer)
+    public function indexAction()
     {
-        $review = $observer->getEvent()->getObject();
-        $akismet = $this->_getAkismet();
-        if ($akismet->isActive() && isset($review)) {
-            $reviewData = array(
-                'name' => $review->getNickname(),
-                'comment' => $review->getTitle().' '.$review->getComment()
-            );
-            if ($akismet->isSpam($reviewData)) {
-                throw new Exception('Akismet Spam Detected');
-            }
-        }
+        $this->_title($this->__('System'))
+             ->_title($this->__('Mgt-Commerce-.com'));
+        $this->loadLayout();
+        $this->_setActiveMenu('mgtcommerce');
+        $this->_addContent($this->getLayout()->createBlock('mgt_base_adminhtml/shop', 'mgt-commerce.com'));
+        $this->renderLayout();
     }
-    
-    protected function _getAkismet()
+
+    protected function _addContent(Mage_Core_Block_Abstract $block)
     {
-        return Mage::getSingleton('mgt_akismet/akismet');
+        $this->getLayout()->getBlock('content')->append($block);
     }
 }

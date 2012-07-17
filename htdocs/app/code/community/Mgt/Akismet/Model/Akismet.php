@@ -20,14 +20,6 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-/**
- * Mgt Akismet Model
- *
- * @category   Mgt
- * @package    Mgt_Akismet
- * @author     Stefan Wieczorek <stefan.wieczorek@mgt-commerce.com>
- */
- 
 class Mgt_Akismet_Model_Akismet extends Mage_Core_Model_Abstract
 {
     const XML_PATH_MGT_AKISMET_ACTIVE = 'default/mgt_akismet/mgt_akismet/active';

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * MGT-Commerce GmbH
  * http://www.mgt-commerce.com
@@ -15,31 +14,29 @@
  * to info@mgt-commerce.com so we can send you a copy immediately.
  *
  * @category    Mgt
- * @package     Mgt_Akismet
+ * @package     Mgt_Base
  * @author      Stefan Wieczorek <stefan.wieczorek@mgt-commerce.com>
  * @copyright   Copyright (c) 2012 (http://www.mgt-commerce.com)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-class Mgt_Akismet_Model_Observer
+class Mgt_Base_Model_Source_Updates_Type extends Mage_Eav_Model_Entity_Attribute_Source_Abstract
 {
-    public function checkReviewForSpam(Varien_Event_Observer $observer)
+    const TYPE_NEW_RELEASE   = 'NEW_RELEASE';
+    const TYPE_MODULE_UPDATE = 'MODULE_UPDATE';
+    const TYPE_INFO          = 'INFO';
+
+    public function toOptionArray()
     {
-        $review = $observer->getEvent()->getObject();
-        $akismet = $this->_getAkismet();
-        if ($akismet->isActive() && isset($review)) {
-            $reviewData = array(
-                'name' => $review->getNickname(),
-                'comment' => $review->getTitle().' '.$review->getComment()
-            );
-            if ($akismet->isSpam($reviewData)) {
-                throw new Exception('Akismet Spam Detected');
-            }
-        }
+        return array(
+            array('value' => self::TYPE_NEW_RELEASE,   'label' => Mage::helper('core')->__('New Releases')),
+            array('value' => self::TYPE_MODULE_UPDATE, 'label' => Mage::helper('core')->__('My Modules Updates')),
+            array('value' => self::TYPE_INFO,          'label' => Mage::helper('core')->__('Other Information')),
+        );
     }
-    
-    protected function _getAkismet()
+
+    public function getAllOptions()
     {
-        return Mage::getSingleton('mgt_akismet/akismet');
+        return $this->toOptionArray();
     }
 }

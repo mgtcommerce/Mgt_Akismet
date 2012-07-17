@@ -21,14 +21,6 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-/**
- * Mgt Akismet Helper
- *
- * @category   Mgt
- * @package    Mgt_Akismet
- * @author     Stefan Wieczorek <stefan.wieczorek@mgt-commerce.com>
- */
-
 class Mgt_Akismet_Helper_Data extends Mage_Core_Helper_Abstract
 {
     const LOGFILE = 'mgt_akismet.log';

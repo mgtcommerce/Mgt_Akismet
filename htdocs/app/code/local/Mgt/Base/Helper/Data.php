@@ -1,5 +1,4 @@
 <?php
-
 /**
  * MGT-Commerce GmbH
  * http://www.mgt-commerce.com
@@ -15,31 +14,13 @@
  * to info@mgt-commerce.com so we can send you a copy immediately.
  *
  * @category    Mgt
- * @package     Mgt_Akismet
+ * @package     Mgt_Base
  * @author      Stefan Wieczorek <stefan.wieczorek@mgt-commerce.com>
  * @copyright   Copyright (c) 2012 (http://www.mgt-commerce.com)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-class Mgt_Akismet_Model_Observer
+class Mgt_Base_Helper_Data extends Mage_Core_Helper_Abstract
 {
-    public function checkReviewForSpam(Varien_Event_Observer $observer)
-    {
-        $review = $observer->getEvent()->getObject();
-        $akismet = $this->_getAkismet();
-        if ($akismet->isActive() && isset($review)) {
-            $reviewData = array(
-                'name' => $review->getNickname(),
-                'comment' => $review->getTitle().' '.$review->getComment()
-            );
-            if ($akismet->isSpam($reviewData)) {
-                throw new Exception('Akismet Spam Detected');
-            }
-        }
-    }
-    
-    protected function _getAkismet()
-    {
-        return Mage::getSingleton('mgt_akismet/akismet');
-    }
+
 }
