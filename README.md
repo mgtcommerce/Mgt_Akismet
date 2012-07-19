@@ -8,7 +8,7 @@ Here our "Akismet spam prevention for magento" is the best solution to kill the 
 
 ## MORE INFORMATION
 
-[SHOP: http://www.mgt-commerce.com/magento-akismet-spam-protection-extension.html](http://www.mgt-commerce.com/magento-akismet-spam-protection-extension.html)
+[http://www.mgt-commerce.com/magento-akismet-spam-protection-extension.html](http://www.mgt-commerce.com/magento-akismet-spam-protection-extension.html)
 
 ## INSTALLATION
 
