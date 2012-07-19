@@ -21,27 +21,15 @@ Here our "Akismet spam prevention for magento" is the best solution to kill the 
 
 ## FEATURES
 
-* Professional toolbar for frontend and backend
+* Less spam
 
-* Requests: involved controller classes, modules, actions and request parameters
+* Less time in moderation of reviews
 
-* General Info: website id, website name, store id, store name, storeview id, storeview code, storeview name and configured caching method
+* 1 Minute Installation
 
-* Handles: Displays all handles
+* No Captcha needed
 
-* Events/Observer: Shows all events with it's observers
-
-* Blocks: overview of block nesting
-
-* Config: enable/disable frontend hints, inline translation and cache clearing
-
-* PHP-Info: output of phpinfo()
-
-* Profiling: output of Varien_Profiler with function execution time, function count and memory usage
-
-* Additional Information: version information, page execution time and overall memory usage
-
-* DB-Profiler: Number of executed queries, average query length, queries per second, longest query length, longest query and detailed query listing including simple syntax highlighting of SQL
+* No frontend/template modifications needed
 
 
 ## CHANGELOG
