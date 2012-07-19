@@ -15,7 +15,7 @@ Here our "Akismet spam prevention for magento" is the best solution to kill the 
 * copy all files to your magento installation
 * Clear the cache in Admin -> System -> Cache Management 
 * Login/Logout from Backend to reload the ACL
-* Create a Akismet account (free) for the API key.  [Akismet: https://akismet.com/signup/#free](https://akismet.com/signup/#free)
+* Create a Akismet account (free) for the API key.  [https://akismet.com/signup/#free](https://akismet.com/signup/#free)
 * Go to System -> Con!guration -> MGT-COMMERCE.COM -> Akismet and enter the Akismet API key
 * Save the settings and test your api key
 
