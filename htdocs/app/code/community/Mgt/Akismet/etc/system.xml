@@ -21,8 +21,8 @@
                     <frontend_type>text</frontend_type>
                     <sort_order>1</sort_order>
                     <show_in_default>1</show_in_default>
-                    <show_in_website>1</show_in_website>
-                    <show_in_store>1</show_in_store>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
                     <fields>
                         <active translate="label">
                             <label>Active</label>
@@ -30,21 +30,34 @@
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
                         </active>
                         <api_key translate="label">
                             <label>Akismet API Key</label>
-                            <comment>Visit: https://akismet.com/signup/</comment>
+                            <comment>Visit: https://akismet.com/signup/ to get a API Key</comment>
                             <frontend_type>text</frontend_type>
                             <sort_order>15</sort_order>
                             <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
                             <depends>
                                 <active>1</active>
                             </depends>
                         </api_key>
+                        <test translate="label">
+                            <label></label>
+                            <comment>This test will ensure the akismet api key is working. You have to save the settings from either of these sections before running this test.</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>Mgt_Akismet_Block_Adminhtml_Test</frontend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <active>1</active>
+                            </depends>
+                        </test>
                     </fields>
                 </mgt_akismet>
             </groups>

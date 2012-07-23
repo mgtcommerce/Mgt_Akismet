@@ -34,6 +34,10 @@ Here our "Akismet spam prevention for magento" is the best solution to kill the 
 
 ## CHANGELOG
 
+1.0.3 
+
+* Fix bug in admin test controller
+
 1.0.2
 
 * add installation and license file

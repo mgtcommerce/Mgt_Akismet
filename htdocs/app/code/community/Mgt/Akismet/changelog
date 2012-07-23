@@ -1,3 +1,6 @@
+1.0.3 Stefan Wieczorek <stefan.wieczorek@mgt-commerce.com>
+Fix bug in admin test controller
+
 1.0.2 Stefan Wieczorek <stefan.wieczorek@mgt-commerce.com>
 Add installation and license file
 
