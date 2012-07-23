@@ -20,14 +20,6 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-/**
- * Mgt Akismet Test Controller
- *
- * @category   Mgt
- * @package    Mgt_Akismet
- * @author     Stefan Wieczorek <stefan.wieczorek@mgt-commerce.com>
- */
-
 class Mgt_Akismet_TestController extends Mage_Adminhtml_Controller_Action
 {
     public function testAction()
