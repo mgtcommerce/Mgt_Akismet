@@ -32,6 +32,17 @@
             </review_save_before>
         </events>
     </global>
+    <admin>
+        <routers>
+            <mgt_akismet>
+                <use>admin</use>
+                <args>
+                    <module>Mgt_Akismet</module>
+                    <frontName>mgtakismet</frontName>
+                </args>
+            </mgt_akismet>
+        </routers>
+    </admin>
     <frontend>
         <routers>
             <contacts>
